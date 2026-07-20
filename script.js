@@ -1,30 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Smooth entrance animation
 
-  const cards = document.querySelectorAll(".card");
+document.addEventListener("DOMContentLoaded",()=>{
 
-  const observer = new IntersectionObserver((entries) => {
+    const elements=document.querySelectorAll(
+        ".text, .photo, section"
+    );
 
-    entries.forEach(entry => {
 
-      if(entry.isIntersecting){
+    elements.forEach((el,index)=>{
 
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
+        el.style.opacity="0";
 
-      }
+        el.style.transform="translateY(30px)";
+
+
+        setTimeout(()=>{
+
+            el.style.transition="all 0.8s ease";
+
+            el.style.opacity="1";
+
+            el.style.transform="translateY(0)";
+
+
+        },index*200);
+
 
     });
 
-  });
-
-  cards.forEach(card=>{
-
-    card.style.opacity=0;
-    card.style.transform="translateY(40px)";
-    card.style.transition="0.8s";
-
-    observer.observe(card);
-
-  });
 
 });
