@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC",sans-serif;
+  background:#fafafa;
+  color:#1d1d1f;
+  line-height:1.8;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 40px;
+}
+
+.hero-text{
+  max-width:520px;
+}
+
+.hero h1{
+  font-size:72px;
+  font-weight:700;
+}
+
+.hero h2{
+  margin-top:20px;
+  color:#666;
+  font-size:30px;
+  font-weight:400;
+}
+
+.hero p{
+  margin-top:30px;
+  font-size:20px;
+  color:#555;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:16px 34px;
+  background:#0071e3;
+  color:white;
+  text-decoration:none;
+  border-radius:40px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#0059b8;
+}
+
+.hero-image img{
+  width:360px;
+  border-radius:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,.15);
+}
+
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:100px 40px;
+}
+
+section h2{
+  font-size:42px;
+  margin-bottom:40px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+ul{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  list-style:none;
+}
+
+li{
+  background:white;
+  padding:12px 24px;
+  border-radius:30px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-image img{
+width:260px;
+margin-bottom:50px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+}
