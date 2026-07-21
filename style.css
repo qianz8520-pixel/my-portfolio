@@ -1,76 +1,91 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:-apple-system,BlinkMacSystemFont,
-    "SF Pro Display",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 
 body {
-    background:#ffffff;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+
+    background: #fbfbfd;
+
     color:#1d1d1f;
+
+    line-height:1.8;
+
 }
 
 
 
-/* Navigation */
+/* 导航 */
 
 nav {
 
     position:fixed;
+
     top:0;
+
     width:100%;
 
     height:70px;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding:0 8%;
+    padding:0 10%;
 
     background:rgba(255,255,255,0.75);
 
     backdrop-filter:blur(20px);
 
-    z-index:100;
+    z-index:99;
 
 }
 
 
+
 .logo {
 
-    font-size:28px;
+    font-size:24px;
+
     font-weight:600;
 
 }
 
 
-.nav-links a {
 
-    margin-left:35px;
+.nav-links a {
 
     text-decoration:none;
 
-    color:#1d1d1f;
+    color:#333;
 
-    font-size:16px;
+    margin-left:30px;
+
+    font-size:15px;
 
 }
 
 
 
 
-/* Hero */
+
+/* 首页 */
 
 .hero {
 
@@ -92,18 +107,41 @@ nav {
 
 .text {
 
-    max-width:550px;
+    max-width:600px;
 
 }
+
 
 
 h1 {
 
     font-size:72px;
 
-    line-height:1.05;
+    line-height:1.15;
 
-    letter-spacing:-3px;
+    letter-spacing:-2px;
+
+}
+
+
+
+h2 {
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.text h2 {
+
+    font-size:28px;
+
+    color:#666;
+
+    margin-top:20px;
 
 }
 
@@ -111,13 +149,19 @@ h1 {
 
 .text p {
 
-    margin-top:30px;
+    font-size:20px;
 
-    font-size:22px;
+    color:#555;
 
-    color:#6e6e73;
+    margin-top:25px;
 
-    line-height:1.5;
+}
+
+
+
+.intro {
+
+    max-width:500px;
 
 }
 
@@ -127,17 +171,17 @@ h1 {
 
     display:inline-block;
 
-    margin-top:40px;
+    margin-top:35px;
 
-    padding:15px 35px;
+    padding:14px 32px;
 
     background:#000;
 
     color:white;
 
-    border-radius:30px;
-
     text-decoration:none;
+
+    border-radius:30px;
 
     transition:.3s;
 
@@ -147,105 +191,192 @@ h1 {
 
 .button:hover {
 
-    transform:scale(1.05);
+    transform:translateY(-3px);
 
 }
 
 
 
-/* photo */
+
+
+/* 图片 */
+
 
 .photo img {
 
-    width:320px;
+    width:330px;
 
-    height:400px;
+    height:420px;
 
     object-fit:cover;
 
-    border-radius:40px;
+    border-radius:35px;
 
     box-shadow:
-    0 30px 60px rgba(0,0,0,.15);
+
+    0 30px 80px rgba(0,0,0,.15);
 
 }
 
 
 
-/* sections */
+
+
+/* 内容区域 */
 
 
 section:not(.hero){
 
-    padding:100px 10%;
+    max-width:1000px;
 
-    text-align:center;
+    margin:auto;
 
-}
-
-
-
-section h2 {
-
-    font-size:45px;
-
-    margin-bottom:30px;
+    padding:100px 40px;
 
 }
+
+
 
 
 
 section p {
 
-    font-size:20px;
+    font-size:18px;
 
-    color:#6e6e73;
+    color:#555;
 
 }
 
 
 
-/* footer */
+
+/* 经历卡片 */
+
+
+.card {
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.06);
+
+}
+
+
+
+
+.card h3 {
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+
+/* 技能 */
+
+.skills {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+
+.skills span {
+
+    background:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
 
 
 footer {
 
     text-align:center;
 
-    padding:40px;
+    padding:50px;
 
-    color:#888;
+    color:#777;
 
 }
 
 
 
-/* mobile */
+
+
+/* 手机端 */
 
 @media(max-width:800px){
 
-.hero{
 
-    flex-direction:column;
+nav{
 
-    text-align:center;
+padding:0 20px;
 
 }
+
+
+.nav-links a{
+
+margin-left:10px;
+
+}
+
+
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
 
 
 h1{
 
-    font-size:48px;
+font-size:48px;
 
 }
+
 
 
 .photo img{
 
-    width:260px;
+width:260px;
 
-    height:330px;
+height:330px;
 
 }
+
+
 
 }
